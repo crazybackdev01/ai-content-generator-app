@@ -1,8 +1,9 @@
 import Stripe from "stripe";
-import { stripe } from "../upgrade/checkout/route";
 import { db } from "@/lib/db";
 import { headers } from "next/headers";
 import { NextResponse } from "next/server";
+
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
 
 export async function POST(req: Request) {
   const body = await req.text();
