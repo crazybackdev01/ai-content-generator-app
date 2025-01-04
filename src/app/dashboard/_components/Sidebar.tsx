@@ -16,11 +16,6 @@ const menuList = [
     icon: History,
     path: "/dashboard/history",
   },
-  {
-    name: "Upgrade",
-    icon: CreditCard,
-    path: "/dashboard/upgrade",
-  },
 ];
 
 export default function Sidebar() {
